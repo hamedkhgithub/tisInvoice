@@ -1,0 +1,36 @@
+[
+    { 
+      "id": 1, 
+      "category": "Power Supply", 
+      "title": "منبع تغذیه 24 ولت 1.5 آمپر", 
+      "model": "PS-24V-1.5", 
+      "descEn": "Power supply 24V DC 1.5A", 
+      "descFa": "منبع تغذیه 24 ولت 1.5 آمپر دارای رگولاتور کاهش نوسان برق", 
+      "image_path": "products/PS-24V2A.PNG",
+      "quantity": 1, 
+      "price": 6580000 
+    },
+    { 
+      "id": 2, 
+      "category": "Relays", 
+      "title": "کنترلر 24 کاناله", 
+      "model": "TIS-RCU-24R-20Z", 
+      "descEn": "Room Controller Unit 24 Ch 10A/5A", 
+      "descFa": "کنترلر هوشمند 24 کاناله خروجی مجهز به دکمه‌های دستی", 
+      "image_path": "products/relay-24.jpg",
+      "quantity": 1, 
+      "price": 74000000 
+    },
+    { 
+      "id": 3, 
+      "category": "Screen", 
+      "title": "نمایشگر لمسی 10 اینچ", 
+      "model": "TIS-SAT101", 
+      "descEn": "10 Inch Touch Screen with WiFi", 
+      "descFa": "نمایشگر لمسی ده اینچ تصویری با قابلیت ارتباط داخلی بین واحدها", 
+      "image_path": "products/screen-10.jpg",
+      "quantity": 1, 
+      "price": 112253000 
+    }
+  ]
+  
