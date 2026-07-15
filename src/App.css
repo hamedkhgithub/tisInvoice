@@ -1,0 +1,98 @@
+/* استایل‌های پایه پایداری فاکتور در وب */
+body {
+  background-color: #f8fafc;
+  font-family: Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+/* 📱 مجبور کردن ستون دسته‌بندی به پذیرش ارتفاع داینامیک در سافاری */
+.col-category {
+  height: auto !important;
+}
+
+
+/* 📱 حل نهایی و قطعی مشکل عرض، تک‌خطی شدن و ریسایز سطرها در سافاری آیفون */
+table {
+  table-layout: fixed !important;
+  width: 100% !important;
+}
+
+table th, table td, table td * {
+  white-space: normal !important;
+  word-break: break-all !important; 
+  overflow-wrap: anywhere !important;
+}
+
+/* 🍏 ترفند کشف‌شده‌ی شما برای آزاد کردن قفل ارتفاع سطرها در سافاری */
+table td, table th {
+  height: auto !important;
+  vertical-align: middle !important;
+}
+
+
+/* 🖨️ تنظیمات اختصاصی برگه پرینت A4 افقی */
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+  .hidden {
+    display: block !important;
+  }
+
+  /* مخفی کردن تمام ابزارها، دکمه‌ها و منوهای وب روی کاغذ */
+  button, input[type="text"], select, label, .print\:hidden {
+    display: none !important;
+  }
+
+  /* آزاد کردن باکس‌ها برای پر کردن کل پهنای کاغذ */
+  .overflow-x-auto, div {
+    overflow: visible !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* فیت شدن ۱۰۰٪ جدول با پهنای برگه بدون بیرون‌زدگی */
+  table {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    font-size: 11px !important;
+  }
+
+  th, td {
+    padding: 5px 6px !important;
+    font-size: 11px !important;
+    border-left: 1px solid #cbd5e1 !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* کادر مجموع قیمت‌ها در پایین برگه */
+  div[class*="mt-6 bg-slate-50"] {
+    margin-top: 15px !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    max-width: 320px !important;
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    page-break-inside: avoid !important;
+  }
+
+  .shadow-md, .shadow-sm, .rounded-xl {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
+}

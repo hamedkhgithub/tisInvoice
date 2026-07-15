@@ -1,0 +1,76 @@
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .hidden {
+    display: block !important;
+  }
+
+  /* مخفی کردن المان‌های وب در زمان پرینت */
+  button, input[type="text"], select, label, .print\:hidden {
+    display: none !important;
+  }
+
+  /* آزاد کردن محفظه جدول برای تبعیت از پیکسل‌های تنظیم شده با ماوس */
+  .overflow-x-auto, div {
+    overflow: visible !important;
+  }
+
+  /* لغو پهنای ۱۰۰٪ اجباری؛ حالا جدول در پرینت دقیقاً به اندازه عرض وب شما باز می‌شود */
+  table {
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    font-size: 11px !important;
+  }
+
+  /* 🎯 جلوگیری از شکستن جدول و سرستون‌ها در صفحات */
+  thead {
+    display: table-header-group !important; /* تکرار خودکار هدر جدول در بالای هر صفحه جدید */
+  }
+
+  /* 🎯 جلوگیری صریح از نصف شدن سطرها بین صفحات */
+  tr {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* رعایت دقیق فواصل سلول‌ها در چاپ */
+  th, td {
+    padding: 5px 6px !important;
+    font-size: 11px !important;
+    border: 1px solid #cbd5e1 !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+  }
+
+  /* لغو ابعاد ثابت باکس عکس در پرینت؛ حالا سایز عکس تابع پهنای دستی ستون تصویر در وب است */
+  td div {
+    border-radius: 6px !important;
+    padding: 2px !important;
+  }
+
+  /* تراز منظم باکس مجموع قیمت در انتهای جدول */
+  div[class*="mt-6 bg-slate-50"] {
+    margin-top: 15px !important;
+    margin-right: auto !important;
+    margin-left: 0 !important;
+    max-width: 320px !important;
+    background-color: #f8fafc !important;
+    border: 1px solid #e2e8f0 !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .shadow-md, .shadow-sm {
+    box-shadow: none !important;
+  }
+}
